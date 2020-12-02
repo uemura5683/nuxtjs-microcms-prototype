@@ -2,7 +2,7 @@ $white: #ffffff;
 $l_gray: #fafafa;
 $gray: #e5e5e5;
 $d_gray: #666666;
-$black: #000000;
+
 
 /*layout*/
 body {
@@ -179,10 +179,8 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     text-decoration: none;
     background-color: $d_gray;
     color: $white;
-    border-radius: 0;
     -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-        -ms-border-radius: 0;
+            border-radius: 0;
     border-color: $d_gray;
     &:hover, &:focus {
         color: $d_gray;
@@ -194,10 +192,8 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     text-decoration: none;
     background-color: $white;
     color: $d_gray;
-    border-radius: 0;
     -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-        -ms-border-radius: 0;
+            border-radius: 0;
     border-color: $d_gray;
     opacity: .7;
     &:hover, &:focus {

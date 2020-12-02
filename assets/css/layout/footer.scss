@@ -1,8 +1,5 @@
-$white: #ffffff;
 $l_gray: #fafafa;
 $gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
 
 .footer {
   position: absolute;
@@ -68,11 +65,10 @@ $black: #000000;
       background:#333333 50% 50%;
       background-size: 17px;
       cursor: pointer;
-      -webkit-transition: 0.3s ease;
       -webkit-transition: 0.5s ease;
-      transition: 0.5s ease;
+              transition: 0.5s ease;
       -webkit-transition-property: top, bottom, opacity;
-      transition-property: top, bottom, opacity;
+              transition-property: top, bottom, opacity;
       overflow: hidden;
       text-indent: -9999px;
       z-index: 995;
@@ -108,7 +104,6 @@ body.active .overlay {
   z-index: 1;
   opacity: 5000;
 }
-
 
 @media screen and (max-width: 767px) {
   .footer {
