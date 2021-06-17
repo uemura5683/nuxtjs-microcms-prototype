@@ -14,6 +14,8 @@ $fs-max: 100;
         background-color: $white;
         #main_content {
             .main_content {
+                width: 75%;
+                margin: 0 auto;
                 > * {
                     justify-content: flex-start;
                     -webkit-justify-content: flex-start;
@@ -23,9 +25,6 @@ $fs-max: 100;
                     height: auto;
                     background: #fff;
                     position: relative;
-                    top: 0;
-                    left: 0;
-                    overflow-y: scroll;
                     display: flex;
                     flex-wrap: wrap;
                     padding: 1.5rem;
@@ -60,7 +59,8 @@ $fs-max: 100;
                 }                
                 #name_img {
                     #title {
-                        margin: 0;
+                        margin: 0 1rem 0 0;
+                        width: calc(50% - 1rem);
                         h2 {
                             font-size: 18px;  
                             padding: 10px 0;
@@ -69,7 +69,7 @@ $fs-max: 100;
                         }
                     }
                     #img {
-                        width: 100%;
+                        width: 50%;
                         position: relative;
                         span {
                             width: 100%;
@@ -156,8 +156,12 @@ $fs-max: 100;
             #main_content {
                 margin: 0 !important;
                 .main_content {
+                    width: calc(100% - 30px);
                     padding: 0 15px !important;
                     margin: 0 !important;
+                    > * {
+                     width: calc(100% - 48px);
+                    }
                     #name_img {
                         #title {
                             margin: 0;

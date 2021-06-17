@@ -156,37 +156,37 @@ if (process.browser) {
 
               // メインビジュアルを表示
               let top_html = '<section class="carousel" aria-label="Gallery"><ol class="carousel__viewport">';
-                  if( json.main_image1 != undefined ) {
-                    top_html += '<li id="carousel__slide1" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image1_link, json.main_image1.url, json.main_image1_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide3" class="carousel__prev">prev</a><a href="#carousel__slide2" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  if( json.main_image2 != undefined ) {
-                    top_html += '<li id="carousel__slide2" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image2_link, json.main_image2.url, json.main_image2_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide1" class="carousel__prev">prev</a><a href="#carousel__slide3" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  if( json.main_image3 != undefined ) {
-                    top_html += '<li id="carousel__slide3" tabindex="0" class="carousel__slide">';
-                    top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image3_link, json.main_image3.url, json.main_image3_alt ); + '</span>';
-                    top_html += '<a href="#carousel__slide2" class="carousel__prev">prev</a><a href="#carousel__slide1" class="carousel__next">next</a>';
-                    top_html += '</li>';
-                  }
-                  top_html += '</ol></section>';
-                  top_main_banner.innerHTML = top_html;
+                if( json.main_image1 != undefined ) {
+                  top_html += '<li id="carousel__slide1" tabindex="0" class="carousel__slide">';
+                  top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image1_link, json.main_image1.url, json.main_image1_alt ); + '</span>';
+                  top_html += '<a href="#carousel__slide3" class="carousel__prev">prev</a><a href="#carousel__slide2" class="carousel__next">next</a>';
+                  top_html += '</li>';
+                }
+                if( json.main_image2 != undefined ) {
+                  top_html += '<li id="carousel__slide2" tabindex="0" class="carousel__slide">';
+                  top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image2_link, json.main_image2.url, json.main_image2_alt ); + '</span>';
+                  top_html += '<a href="#carousel__slide1" class="carousel__prev">prev</a><a href="#carousel__slide3" class="carousel__next">next</a>';
+                  top_html += '</li>';
+                }
+                if( json.main_image3 != undefined ) {
+                  top_html += '<li id="carousel__slide3" tabindex="0" class="carousel__slide">';
+                  top_html += '<span class="carousel__snapper">' + top_link_judge( json.main_image3_link, json.main_image3.url, json.main_image3_alt ); + '</span>';
+                  top_html += '<a href="#carousel__slide2" class="carousel__prev">prev</a><a href="#carousel__slide1" class="carousel__next">next</a>';
+                  top_html += '</li>';
+                }
+                top_html += '</ol></section>';
+                top_main_banner.innerHTML = top_html;
 
-              let top_new_html = '<div class="top_content_inner"><div class="top_content_inner text-center">';
+                let top_new_html = '<div class="top_content_inner"><div class="top_content_inner text-center">';
 
-                  if( json.portfolio.length > 0 ) {
-                    top_new_html += top_blog_content( json.portfolio, 'Portfolio', 'portfolio' ); // ポートフォリオコンテンツを表示
-                  }
-                  if( json.blog.length > 0 ) {
-                    top_new_html += top_blog_content( json.blog, 'Blog',  'blog' ); // ビジネスコンテンツを表示
-                  }
-                  top_new_html += '</div></div>';
-                  top_news_banner.innerHTML = top_new_html; 
+                if( json.portfolio.length > 0 ) {
+                  top_new_html += top_blog_content( json.portfolio, 'Portfolio', 'portfolio' ); // ポートフォリオコンテンツを表示
+                }
+                if( json.blog.length > 0 ) {
+                  top_new_html += top_blog_content( json.blog, 'Blog',  'business' ); // ビジネスコンテンツを表示
+                }
+              top_new_html += '</div></div>';
+              top_news_banner.innerHTML = top_new_html; 
     } );
   }
 

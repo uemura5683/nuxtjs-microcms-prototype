@@ -85,9 +85,8 @@ body {
 
 /*コンテンツ*/
 .c-card-extend {
-    vertical-align: top;
-    display: inline-block;
     padding: 0 15px 15px;
+    width: calc(99.9% / 3 - 30px);
     &:hover, &:focus {
         figure {
             a, span {
@@ -148,12 +147,8 @@ body {
 }
 @media screen and (max-width: 767px) {
     .c-card-extend {
-        &:nth-child( 2n - 1 ) {
-            padding: 0 5px 15px 15px;
-        }
-        &:nth-child( 2n - 2 ) {
-            padding: 0 15px 15px 5px;
-        }
+        width: calc(100% / 2 - 10px);
+        padding: 0 5px 10px;
     }
     .card-title {
         font-size: 1.2rem;
@@ -174,6 +169,9 @@ textarea {
 }
 button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="submit"].btn-primary, input[type="submit"].btn-back, span.btn-primary, span.btn-back {
     width: 230px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
 }
 button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     text-decoration: none;
@@ -196,6 +194,7 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
             border-radius: 0;
     border-color: $d_gray;
     opacity: .7;
+    border: 1px solid $d_gray;
     &:hover, &:focus {
         color: $d_gray;
         opacity: .4;
@@ -228,69 +227,18 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 }
 
 /* error */
+.alert-warning, .alert-success {
+    border-radius: 10px;
+    margin: 0 0 1rem;
+    padding: 1rem;
+}
 .alert-warning {
     background-color: $l_gray;
     color: $d_gray;
     border: 1px solid $d_gray;
 }
-
 .alert-success {
     background-color: $d_gray;
     color: $l_gray;
     border: 1px solid $l_gray; 
-}
-
-/* search */
-.o-sort-pulldown {
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    border-bottom: 1px solid $gray;
-    background-color: $l_gray;
-    border-top: 1px solid $gray;
-    padding: 1rem;
-    margin: 0 15px 1rem;
-    .o-sort-select {
-        width: auto;
-        margin: 0 1rem 0 0;
-        form {
-        font-size: 0;
-        label {
-            display: inline-block;
-            font-size: 1rem;
-            vertical-align: middle;
-            margin: 0 .5rem 0 0;
-        }
-        select {
-            margin: 0;
-            width: auto;
-            font-size: 1rem;
-            min-width: 150px;
-        }
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .o-sort-pulldown {
-        margin: 0 0 1rem;
-        .o-sort-select {
-            width: 100%;
-            margin: 0 0 1rem;
-            form {
-                label {
-                    width: 30%;
-                    text-align: left;
-                    margin: 0;
-                }
-                select {
-                    width: 70%;
-                    min-width: none;
-                }
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
 }

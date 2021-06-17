@@ -50,7 +50,6 @@ export default {
   */
   css: [
     // プロジェクト内の SCSS ファイル
-    '@/bootstrap/dist/css/bootstrap.css',
     '@/assets/css/foundation/reset.scss',
     '@/assets/css/layout/header.scss',
     '@/assets/css/layout/footer.scss',

@@ -25,6 +25,7 @@ TOP
       counter-reset: item;
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
+      margin: 0 0 10px;
       .carousel__slide {
         position: relative;
         flex: 0 0 100%;
@@ -150,6 +151,12 @@ TOP
 /*top content*/
 .top_content_inner {
   margin: 0 0 2rem;
+  text-align: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 767px) {
   #top-page {

@@ -9,7 +9,6 @@ $gray: #e5e5e5;
   footer {
     width: 100%;
     margin: 0 auto;
-    border-bottom: 1px solid $gray;
     background-color: $l_gray;
     border-top: 1px solid $gray;
     padding: 1em 0;
@@ -17,11 +16,10 @@ $gray: #e5e5e5;
     > * {
       width: 90%;
       margin: 0 auto;
-      display: table;
+      display: flex;
+      flex-wrap: wrap;
       > * {
-        display: table-cell;
         width: 50%;
-        vertical-align: middle;
       }
       .footer-left {
         p {
@@ -46,14 +44,6 @@ $gray: #e5e5e5;
     }
     a {
       text-decoration: none;
-    }
-    h1 {
-      font-size: 28px;
-      margin: 0 auto 10px;
-    }
-    p {
-      line-height: 1.5;
-      font-size: 11px;
     }
     .pagetop {
       position: fixed;

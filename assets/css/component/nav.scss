@@ -36,7 +36,6 @@ $black: #000000;
     }
   }
 }
-
 body.active {
   #menu {
     .menu_btn {
@@ -58,31 +57,26 @@ body.active {
     }
   }
 }
-
 nav {
   overflow-x: hidden;
   overflow-y: scroll;
   white-space: nowrap;
-  border-bottom: 1px solid #e5e5e5;
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   border-bottom: 1px solid $gray;
   background-color: #fafafa;
-  display: block;
   z-index: 7000;
   max-width: 265px;
   margin-right: -265px;
-  padding-top: calc( 1rem + 56px);
+  padding-top: calc( 1rem + 66px);
   -webkit-transition: margin 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
           transition: margin 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
   > ul {
       width: 264px;
       margin: 0 auto;
       display: flex;
-      -webkit-justify-content: center;
-      justify-content: center;
       flex-wrap: wrap;
       -webkit-flex-weap: wrap;
       > li {
@@ -90,8 +84,6 @@ nav {
         text-align: center;
         opacity: 0;
         position: relative;
-        right: -100%;
-        top: 0;
         a, label {
           display: block;
           text-decoration: none;
@@ -100,48 +92,6 @@ nav {
           position: relative;
           &:hover, &:focus {
             opacity: .7;
-          }
-        }
-        input[type="checkbox"] {
-          display: none;
-          + label {
-            &:after {
-              content: '';
-              position: absolute;
-              border-left: 2px solid #666666;
-              border-bottom: 2px solid #666666;
-              width: 12px;
-              height: 12px;
-              display: block;
-              transform: rotate(-45deg);
-              right: 25px;
-              top: calc( 50% - 9px );
-            }
-            + ul {
-              background-color: $gray;
-              height: 0;
-              transition: .2s;
-              overflow: hidden;
-              opacity: 1;
-            }
-          }
-          &:checked {
-            + label {
-              &:after {
-                transform: rotate(135deg);
-                top: calc( 50% - 3px);
-              }
-              + ul {
-                height: calc( 100px + 16px );
-                transition: .2s;
-                overflow: hidden;
-                li {
-                  opacity: 1;
-                  right: 0%;
-                  top: 0;
-                }
-              }
-            }
           }
         }
       }
@@ -162,7 +112,6 @@ nav {
       }
     }
   }
-  
   body.active {
     nav {
       margin-right: 0px;
@@ -188,15 +137,12 @@ nav {
 
   @keyframes slideNav{
     0%{
-      opacity:0;
-      left: 100%;
+      opacity:0; left: 100%;
     }
     80%{
       opacity:1
     }
     to{
-      margin-left:0;
-      opacity:1;
-      left: 0%;
+      margin-left:0; opacity:1; left: 0%;
     }
   }
