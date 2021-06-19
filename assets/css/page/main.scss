@@ -11,7 +11,7 @@ TOP
   }
   .carousel {
     position: relative;
-    padding-top: 52.5%;
+    padding-top: 40%;
     perspective: 100px;
     .carousel__viewport {
       position: absolute;
@@ -170,11 +170,11 @@ TOP
 /* animation */
 #animaton_bg {
   -webkit-animation:.5s linear infinite fadein-keyframes 4s;
-  animation:.5s linear infinite fadein-keyframes 4s;
+          animation:.5s linear infinite fadein-keyframes 4s;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+          animation-iteration-count: 1;
   position: fixed;
   background-color: white;
   width: 100%;
@@ -192,8 +192,8 @@ TOP
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
     text-align: center;
     img {
       width: 180px;
