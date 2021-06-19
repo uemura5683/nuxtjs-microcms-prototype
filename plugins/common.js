@@ -286,21 +286,4 @@ if (process.browser) {
       }
     } );
   }
-
-  // プロフィールページ
-  if( profile_page_flag ) {
-    fetch("https://nu-base-template.microcms.io/api/v1/profile", {
-        headers: {
-          "X-API-KEY": ApiKey
-        }
-      })
-      .then(res => res.json())
-      .then(json => {
-          document.getElementById("title").innerHTML = "<h2>" + json.title + "</h2>";
-          document.getElementById("img").innerHTML = "<img src='" + json.image.url + "' alt='" + json.title + "'>";
-          document.getElementById("description").innerHTML = json.description;
-          document.getElementById("carrer").innerHTML = json.carrer;
-          document.getElementById("programing").innerHTML = "<h3>" + json.skill.title + "</h3><div class='skill_detail'>" + json.skill.skill + "</div>";
-        } );
-  }
 }
