@@ -26,9 +26,6 @@ body {
     }
 }
 
-.header + * {
-    margin-top: calc( 1rem + 1px + 56px + 1rem ) !important
-}
 .container {
     max-width: 100% !important;
 }
@@ -130,11 +127,8 @@ body {
     }
 }
 .card-title {
-    margin-bottom: 0.75rem;
     padding: 10px 15px 10px;
-    font-size: 1.5rem;
-    margin: 0 auto 2rem;
-    text-align: center;
+    margin: 2rem auto;
     display: inline-block;
     border-bottom: 1px solid #333333;
     font-weight: bold;

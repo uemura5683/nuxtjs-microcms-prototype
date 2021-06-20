@@ -83,7 +83,6 @@ $fs-max: 100;
                 }
                 #description, #carrer, #programing {
                     h2, h3 {
-                        font-size: 1.2rem;
                         padding: 10px 0px;
                         margin: 10px auto;
                         border-bottom: 1px solid $d_gray;
@@ -92,8 +91,6 @@ $fs-max: 100;
                     .skill_detail, p {
                         margin: 1rem 0 1rem 1.5rem;
                         width: calc( 75% - 1.5rem );
-                        font-size: 1.2rem;
-                        line-height: 1.6;
                     }
                     .skill_detail {
                         ul {
@@ -101,8 +98,6 @@ $fs-max: 100;
                             flex-wrap: wrap;
                             li {
                                 margin: 1rem 0;
-                                font-size: 1.2rem;
-                                line-height: 1.6;
                                 width: 47.5%;
                                 &:nth-of-type( 2n - 1 ) {
                                     margin: 1rem 5% 1rem 0;
@@ -166,10 +161,6 @@ $fs-max: 100;
                         #title {
                             margin: 0;
                             padding: 0 0 1rem;
-                            h2 {
-                                font-size: 1.2rem;
-                                line-height: 1.8;
-                            }
                         }
                         #img {
                             padding: 0;
@@ -177,8 +168,6 @@ $fs-max: 100;
                     }
                     #description, #carrer, #programing {
                         h2, h3 {
-                            font-size: 1.2rem;
-                            line-height: 1.8;
                             width: 100%;
                             padding: 0;
                             margin: 0;
@@ -186,8 +175,6 @@ $fs-max: 100;
                         .skill_detail, p {
                             margin: 1rem 0;
                             width: 100%;
-                            font-size: 1rem;
-                            line-height: 1.6;
                         }
                         .skill_detail {
                             margin: 0;

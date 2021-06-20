@@ -1,7 +1,7 @@
 <template>
   <nav id="navigation">
       <ul>
-          <li><a href="/blog/business">Business</a></li>
+          <li><a href="/blog/">Blog</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
           <li><a href="/profile/">Profile</a></li>
           <li><a href="/contact/">Contact</a></li>

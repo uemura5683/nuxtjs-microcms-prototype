@@ -16,3 +16,18 @@
     </main>
   </div>
 </template>
+
+<script>
+import axios from 'axios'
+export default {
+  async asyncData({ params }) {
+    const { data } = await axios.get(
+      `https://nu-base-template.microcms.io/api/v1/top`,
+      {
+        headers: { 'X-API-KEY': process.env.API_KEY }
+      }
+    )
+    return data
+  }
+}
+</script>

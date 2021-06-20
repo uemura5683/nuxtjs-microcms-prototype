@@ -2,16 +2,16 @@
   <div id="profile-page" class="container">
     <main> 
       <div id="main_content">
-        <div class="main_content col-md-10 p-0">
+        <div class="main_content">
             <div id="name_img">
-              <div id="title">{{ items.title }}</div>
-              <div id="img"><img :src="items.image.url"></div>
+              <div id="title">{{ profile.title }}</div>
+              <div id="img"><img :src="profile.image.url"></div>
             </div>
-            <div id="description" v-html="items.description"></div>
-            <div id="carrer" v-html="items.carrer"></div>
+            <div id="description" v-html="profile.description"></div>
+            <div id="carrer" v-html="profile.carrer"></div>
             <div id="programing">
-                <h3>{{items.skill.title}}</h3>
-                <div class='skill_detail' v-html="items.skill.skill"></div>
+                <h3>{{profile.skill.title}}</h3>
+                <div class='skill_detail' v-html="profile.skill.skill"></div>
             </div>
         </div>
       </div>
@@ -40,9 +40,8 @@
           headers: { 'X-API-KEY': process.env.API_KEY }
         }
       );
-      console.log(data);
       return {
-        items: data
+        profile: data
       }
     }
 }

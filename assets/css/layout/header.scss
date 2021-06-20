@@ -2,7 +2,7 @@ $l_gray: #fafafa;
 $gray: #e5e5e5;
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 8000;
@@ -37,12 +37,7 @@ $gray: #e5e5e5;
       text-decoration: none;
     }
     h1 {
-      font-size: 28px;
       margin: 0 auto;
-    }
-    p {
-      line-height: 1.5;
-      font-size: 11px;
     }
   }
 }
