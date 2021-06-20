@@ -56,3 +56,23 @@
     }
   }
 </script>
+<style lang="scss">
+#news-list-page {
+  #news-content-list {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #news-list-page {
+    #news-content-list {
+      width: 100%;
+    }
+  }
+}
+</style>
