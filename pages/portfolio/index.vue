@@ -3,21 +3,24 @@
     <main>
       <div id="main_content">
         <div class="main_content">
-          <div id="news-content-list">
-            <div class="news_content_inner text-center">
+          <div id="news-content-list" class="text-center">
               <h2 class="card-title">Portfolio</h2>
               <ul>
                   <li class="c-card-extend" v-for="portfolio in portfolios" :key="portfolio.id">
-                    <a v-bind:href="portfolio.link" target="_blank">
-                      <figure><img :src="portfolio.image.url"></figure>
+                      <figure>
+                        <a
+                          v-bind:href="portfolio.link"
+                          target="_blank"
+                          :style="{ 'background-image': 'url(' + portfolio.image.url + ')' }"
+                          :alt="portfolio.title">
+                        </a>
+                      </figure>
                       <p class="c-post-content">
                         <span class="c-post-info-date">{{portfolio.date | moment('LTS')}}</span>
                         <span class="c-post-info-title">{{portfolio.title}}</span>
                       </p>
-                    </a>                    
                   </li>
               </ul>
-            </div>
           </div>
         </div>
       </div>
@@ -58,7 +61,6 @@
 <style lang="scss">
 #news-list-page {
   #news-content-list {
-    width: 75%;
     text-align: center;
     margin: 0 auto;
     ul {
