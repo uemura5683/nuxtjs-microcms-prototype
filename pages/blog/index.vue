@@ -2,25 +2,23 @@
   <div id="news-list-page" class="container mt-4 p-0">
     <main>
       <div id="main_content">
-        <div class="main_content">
-          <div id="news-content-list" class="text-center">
-              <h2 class="card-title">Blog</h2>
-              <ul>
-                  <li class="c-card-extend" v-for="blog in blogs" :key="blog.id">
-                      <figure>
-                        <nuxt-link
-                          :to="`/blog/${blog.id}`"
-                          :style="{ 'background-image': 'url(' + blog.image.url + ')' }"
-                          :alt="blog.title">>
-                        </nuxt-link>
-                      </figure>
-                      <p class="c-post-content">
-                        <span class="c-post-info-date">{{blog.date | moment('LTS')}}</span>
-                        <span class="c-post-info-title">{{blog.title}}</span>
-                      </p>
-                  </li>
-              </ul>
-            </div>
+        <div id="news-content-list" class="text-center">
+            <h2 class="card-title">Blog</h2>
+            <ul>
+                <li class="c-card-extend" v-for="blog in blogs" :key="blog.id">
+                    <figure>
+                      <nuxt-link
+                        :to="`/blog/${blog.id}`"
+                        :style="{ 'background-image': 'url(' + blog.image.url + ')' }"
+                        :alt="blog.title">>
+                      </nuxt-link>
+                    </figure>
+                    <p class="c-post-content">
+                      <span class="c-post-info-date">{{blog.date | moment('LTS')}}</span>
+                      <span class="c-post-info-title">{{blog.title}}</span>
+                    </p>
+                </li>
+            </ul>
         </div>
       </div>
     </main>

@@ -2,26 +2,24 @@
   <div id="news-list-page" class="container">
     <main>
       <div id="main_content">
-        <div class="main_content">
-          <div id="news-content-list" class="text-center">
-              <h2 class="card-title">Portfolio</h2>
-              <ul>
-                  <li class="c-card-extend" v-for="portfolio in portfolios" :key="portfolio.id">
-                      <figure>
-                        <a
-                          v-bind:href="portfolio.link"
-                          target="_blank"
-                          :style="{ 'background-image': 'url(' + portfolio.image.url + ')' }"
-                          :alt="portfolio.title">
-                        </a>
-                      </figure>
-                      <p class="c-post-content">
-                        <span class="c-post-info-date">{{portfolio.date | moment('LTS')}}</span>
-                        <span class="c-post-info-title">{{portfolio.title}}</span>
-                      </p>
-                  </li>
-              </ul>
-          </div>
+        <div id="news-content-list" class="text-center">
+            <h2 class="card-title">Portfolio</h2>
+            <ul>
+                <li class="c-card-extend" v-for="portfolio in portfolios" :key="portfolio.id">
+                    <figure>
+                      <a
+                        v-bind:href="portfolio.link"
+                        target="_blank"
+                        :style="{ 'background-image': 'url(' + portfolio.image.url + ')' }"
+                        :alt="portfolio.title">
+                      </a>
+                    </figure>
+                    <p class="c-post-content">
+                      <span class="c-post-info-date">{{portfolio.date | moment('LTS')}}</span>
+                      <span class="c-post-info-title">{{portfolio.title}}</span>
+                    </p>
+                </li>
+            </ul>
         </div>
       </div>
     </main>

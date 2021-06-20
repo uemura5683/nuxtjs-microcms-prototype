@@ -1,7 +1,7 @@
 <template>
   <div id="news-detail-page" class="container">
     <main> 
-      <div id="main_content" class="container">
+      <div id="main_content">
         <div class="news-detail-inner">
           <figure :style="{ 'background-image': 'url(' + blogs.image.url + ')' }"></figure>
           <h2 class="c-post-info-title">{{ blogs.title }}</h2>

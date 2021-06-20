@@ -1,7 +1,7 @@
 <template>
   <div id="inquiry-conplete" class="container">
     <main> 
-      <div class="main_contenttext">
+      <div id="main_content">
         <h2 class="card-title">Contact</h2>
         <div class="lead">
           <p>

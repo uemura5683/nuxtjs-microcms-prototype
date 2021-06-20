@@ -1,48 +1,48 @@
 <template>
-  <div id="profile-page" class="container">
-    <main> 
-      <div id="main_content">
-        <div class="main_content">
-            <div id="name_img">
-              <h2 id="title">{{ profile.title }}</h2>
-              <div id="img"><img :src="profile.image.url"></div>
+    <div id="profile-page" class="container">
+        <main> 
+            <div id="main_content">
+                <div class="profile-page-inner">
+                    <div id="name_img">
+                    <h2 id="title">{{ profile.title }}</h2>
+                    <div id="img"><img :src="profile.image.url"></div>
+                    </div>
+                    <div id="description" v-html="profile.description"></div>
+                    <div id="carrer" v-html="profile.carrer"></div>
+                    <div id="programing">
+                        <h3>{{profile.skill.title}}</h3>
+                        <div class='skill_detail' v-html="profile.skill.skill"></div>
+                    </div>
+                </div>
             </div>
-            <div id="description" v-html="profile.description"></div>
-            <div id="carrer" v-html="profile.carrer"></div>
-            <div id="programing">
-                <h3>{{profile.skill.title}}</h3>
-                <div class='skill_detail' v-html="profile.skill.skill"></div>
-            </div>
-        </div>
-      </div>
-    </main>
-  </div>
+        </main>
+    </div>
 </template>
 
 <script>
-  import axios from 'axios'
-  export default {
-    head: {
-      title: 'プロフィール | フロントエンド うえむーのプロトタイプサイト | NU-Prototype',
-      meta: [
-        { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのプロフィールページです。' }
-      ]
-    },
-    data() {
-      return {
-        data: {}
-      };
-    },
-    async asyncData({ params }) {
-      const { data } = await axios.get(
-        `https://nu-base-template.microcms.io/api/v1/profile`,
-        {
-          headers: { 'X-API-KEY': process.env.API_KEY }
+    import axios from 'axios'
+    export default {
+        head: {
+        title: 'プロフィール | フロントエンド うえむーのプロトタイプサイト | NU-Prototype',
+        meta: [
+            { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのプロフィールページです。' }
+        ]
+        },
+        data() {
+            return {
+                data: {}
+            };
+        },
+        async asyncData({ params }) {
+        const { data } = await axios.get(
+            `https://nu-base-template.microcms.io/api/v1/profile`,
+            {
+            headers: { 'X-API-KEY': process.env.API_KEY }
+            }
+        );
+        return {
+            profile: data
         }
-      );
-      return {
-        profile: data
-      }
     }
 }
 </script>
@@ -63,7 +63,7 @@ $fs-max: 100;
         padding: 0;
         background-color: $white;
         #main_content {
-            .main_content {
+            .profile-page-inner {
                 width: 75%;
                 margin: 0 auto;
                 > * {
@@ -200,12 +200,12 @@ $fs-max: 100;
             padding: 0.5rem 0;
             #main_content {
                 margin: 0 !important;
-                .main_content {
+                .profile-page-inner {
                     width: calc(100% - 30px);
                     padding: 0 15px !important;
                     margin: 0 !important;
                     > * {
-                     width: calc(100% - 48px);
+                        width: calc(100% - 48px);
                     }
                     #name_img {
                         #title {
