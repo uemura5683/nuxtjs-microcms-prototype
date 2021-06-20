@@ -38,7 +38,6 @@
           headers: { 'X-API-KEY': process.env.API_KEY }
         }
       )
-      console.log(data);
       return {
         blogs: data
       }
