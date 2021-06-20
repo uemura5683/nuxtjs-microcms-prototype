@@ -1,10 +1,77 @@
 <template>
   <div id="top-page">
     <main> 
-        <div id="main_banner"></div>
+        <div id="main_banner">
+          <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+              <li v-if="top.main_image1" id="carousel__slide1" tabindex="0" class="carousel__slide">
+                <span class="carousel__snapper">
+                  <a v-if="top.main_image1_link" v-bind:href="top.main_image1_link" target="_blank">
+                    <img :src="top.main_image1.url" :alt="top.main_image1_alt" />
+                  </a>
+                  <a href="#carousel__slide3" class="carousel__prev"></a><a href="#carousel__slide2" class="carousel__next"></a>
+                </span>
+              </li>
+              <li v-if="top.main_image2" id="carousel__slide2" tabindex="0" class="carousel__slide">
+                <span class="carousel__snapper">
+                  <a v-if="top.main_image2_link" v-bind:href="top.main_image2_link" target="_blank">
+                    <img :src="top.main_image2.url" :alt="top.main_image2_alt" />
+                  </a>
+                  <a href="#carousel__slide1" class="carousel__prev"></a><a href="#carousel__slide3" class="carousel__next"></a>
+              </span>
+              </li>
+              <li v-if="top.main_image3" id="carousel__slide3" tabindex="0" class="carousel__slide">
+                <span class="carousel__snapper">
+                  <a v-if="top.main_image3_link" v-bind:href="top.main_image3_link" target="_blank">
+                    <img :src="top.main_image3.url" :alt="top.main_image3_alt" />
+                  </a>
+                  <a href="#carousel__slide2" class="carousel__prev"></a><a href="#carousel__slide1" class="carousel__next"></a>
+              </span>
+              </li>
+            </ol>
+          </section>
+        </div>
         <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
           <div class="main_content col-md-10 p-0">
-            <div id="news"></div>
+            <div id="news">
+              <div class="top_content_inner">
+                <div class="top_content_inner text-center">
+                    <h2 class="card-title">Blog</h2>
+                    <ul>
+                      <li class="c-card-extend" v-for="blog in top.blog" :key="blog.id">
+                        <figure>
+                          <nuxt-link 
+                              :to="`/blog/${blog.id}`"
+                              :style="{ 'background-image': 'url(' + blog.image.url + ')' }"
+                              :alt="blog.title">
+                          </nuxt-link>
+                        </figure>
+                        <p class="c-post-content">
+                          <span class="c-post-info-date">{{blog.date | moment('LTS')}}</span>
+                          <span class="c-post-info-title">{{blog.title}}</span>
+                        </p>
+                      </li>
+                    </ul>
+                    <h2 class="card-title">Portfolio</h2>
+                    <ul>
+                      <li class="c-card-extend" v-for="portfolio in top.portfolio" :key="portfolio.id">
+                        <figure>
+                          <a
+                            v-bind:href="portfolio.link"
+                            target="_blank"
+                            :style="{ 'background-image': 'url(' + portfolio.image.url + ')' }"
+                            :alt="portfolio.title"
+                          ></a>
+                        </figure>
+                        <p class="c-post-content">
+                          <span class="c-post-info-date">{{portfolio.date | moment('LTS')}}</span>
+                          <span class="c-post-info-title">{{portfolio.title}}</span>
+                        </p>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div id="animaton_bg">
@@ -18,8 +85,17 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
+import moment from "moment";
 export default {
+  filters: {
+      moment: function (date) {
+          return moment(date).format('YYYY/MM/DD HH:mm');
+      }
+  },
+  data: {
+    posts: []
+  },
   async asyncData({ params }) {
     const { data } = await axios.get(
       `https://nu-base-template.microcms.io/api/v1/top`,
@@ -27,7 +103,10 @@ export default {
         headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
-    return data
+    console.log(data);
+    return {
+      top: data
+    }
   }
 }
 </script>

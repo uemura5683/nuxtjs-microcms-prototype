@@ -54,8 +54,7 @@ export default {
     '@/assets/css/layout/header.scss',
     '@/assets/css/layout/footer.scss',
     '@/assets/css/component/nav.scss',
-    '@/assets/css/component/part.scss',
-    '@/assets/css/page/inquiry.scss'
+    '@/assets/css/component/part.scss'
   ],
   /*
   ** Plugins to load before mounting the App

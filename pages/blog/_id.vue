@@ -3,9 +3,9 @@
     <main> 
       <div id="main_content" class="container">
         <div class="news-detail-inner">
+          <figure :style="{ 'background-image': 'url(' + blogs.image.url + ')' }"></figure>
           <h2 class="c-post-info-title">{{ blogs.title }}</h2>
           <p class="c-post-content">{{blogs.date | moment('LTS')}}</p>
-          <figure :style="{ 'background-image': 'url(' + blogs.image.url + ')' }"></figure>
           <div class="dom-content" v-html="blogs.body"></div>
         </div>
       </div>
@@ -51,33 +51,59 @@
     .news-detail-inner {
       flex: 0 0 83.333333%;
       max-width: 83.333333%;
-      margin: 0 auto;
+      margin: 2rem auto 0;
       border: 1px solid #e5e5e5;
       padding: 2rem;
-      .c-post-info-title {
+      .c-post-info-title,
+      .c-post-content {
         font-size: 2.4rem;
-        margin: 0 0 1rem;
+        margin: 0 0 1rem 20px;
         float: left;
+        width: calc(50% - 20px);
       }
       .c-post-content {
-        clear: both;
-        float: left;
+        font-size: 1.8rem;
       }
       figure {
         padding: 25% 0 0;
         background-repeat: no-repeat;
-        width: 50%;
-        border: 1px solid black;
+        background-position: center;
         background-size: cover;
+        width: 50%;
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
         margin: 0 0 1rem;
-        float: right;
+        float: left;
       }
       .dom-content {
         width: calc(100% - 4rem);
-        border: 1px solid #666666;
+        border: 1px solid #e5e5e5;
         padding: 2rem;
         clear: both;
       }
     }
   }
+  @media screen and (max-width: 767px) {
+    #news-detail-page {
+      .news-detail-inner {
+        margin: 1rem auto 0;
+        padding: 1rem;
+        .c-post-info-title,
+        .c-post-content {
+          width: 100%;
+          margin: 0 0 1rem;
+          font-size: 1.4rem;
+        }
+        figure {
+          width: 100%;
+          padding: 70% 0 0;
+        }
+        .dom-content {
+          padding: 1rem;
+          width: calc(100% - 2rem);
+        }
+      }
+    }
+  }
+
 </style>

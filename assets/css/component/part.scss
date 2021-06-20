@@ -166,6 +166,11 @@ button.btn-primary, button.btn-back, a.btn-primary, a.btn-back, input[type="subm
     height: 40px;
     display: inline-block;
     line-height: 40px;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size: 1.4rem;
+    border-width: 1px;
+    cursor: pointer;
 }
 button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
     text-decoration: none;
@@ -221,10 +226,11 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 }
 
 /* error */
-.alert-warning, .alert-success {
+[class*=alert]{
     border-radius: 10px;
     margin: 0 0 1rem;
     padding: 1rem;
+    border-radius: 0;
 }
 .alert-warning {
     background-color: $l_gray;

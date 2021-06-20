@@ -1,25 +1,23 @@
 <template>
-  <div id="inquiry-page" class="container mt-4 p-0">
+  <div id="inquiry-conplete" class="container">
     <main> 
-      <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
-          <div class="main_content col-md-6 p-0 text-center">
-            <h2 class="card-title">Contact</h2>
-            <div class="lead">
-              <p>
-                この度はお問い合わせメールをお送りいただき<br class="visible-phone">
-                ありがとうございます。<br>
-                今しばらくお待ちくださいますよう<br class="visible-phone">
-                よろしくお願い申し上げます。<br>
-                なお、しばらくたっても返信、返答がない場合は、<br>
-                お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>
-                その際は、お手数ですが<br class="visible-phone">
-                再度お問い合わせいただけますと幸いです。
-              </p>
-            </div>
-            <div class="form-actions">
-              <a href="/" class="btn btn-small btn-back">トップへ</a>
-            </div>
-          </div>
+      <div class="main_contenttext">
+        <h2 class="card-title">Contact</h2>
+        <div class="lead">
+          <p>
+            この度はお問い合わせメールをお送りいただき<br class="visible-phone">
+            ありがとうございます。<br>
+            今しばらくお待ちくださいますよう<br class="visible-phone">
+            よろしくお願い申し上げます。<br>
+            なお、しばらくたっても返信、返答がない場合は、<br>
+            お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>
+            その際は、お手数ですが<br class="visible-phone">
+            再度お問い合わせいただけますと幸いです。
+          </p>
+        </div>
+        <div class="form-actions">
+          <a href="/" class="btn btn-small btn-back">トップへ</a>
+        </div>
       </div>
     </main>
   </div>
@@ -35,3 +33,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  #inquiry-conplete {
+    text-align: center;
+  }
+</style>

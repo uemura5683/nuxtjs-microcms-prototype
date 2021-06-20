@@ -4,7 +4,7 @@
       <div id="main_content">
         <div class="main_content">
             <div id="name_img">
-              <div id="title">{{ profile.title }}</div>
+              <h2 id="title">{{ profile.title }}</h2>
               <div id="img"><img :src="profile.image.url"></div>
             </div>
             <div id="description" v-html="profile.description"></div>

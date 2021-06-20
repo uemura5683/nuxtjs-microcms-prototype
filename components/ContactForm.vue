@@ -109,3 +109,153 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+$white: #ffffff;
+$l_gray: #fafafa;
+$gray: #e5e5e5;
+$d_gray: #666666;
+$black: #000000;
+#inquiry_form {
+    .control-group {
+        .control-label {
+            margin: 0 0 5px;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 0 20px;
+        }
+        textarea {
+            width: 100%;
+        }
+    }
+}
+#inquiry-page {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    .confirm-block {
+        opacity: 0;
+        z-index: -1;
+        position: fixed;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 60%;
+        overflow: scroll;
+        padding: 40px 15px 0;
+        transform: translateY(-50%) translateX(-50%);
+        transition : all 200ms;
+        table {
+            width: 100%;
+            text-align: left;
+            border-top: 1px solid $gray;
+            border-right: 1px solid $gray;
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+                border-left: 1px solid $gray;
+                border-bottom: 1px solid $gray;
+            }
+        }
+        &.active {
+            opacity: 1;
+            z-index: 12000;
+            + .overlay_confirm {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: rgba(0,0,0,0.66667);
+                opacity: .7;
+                top: 0;
+                left: 0;
+                z-index: 10000;
+                transition: all 100ms;
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    border-left: 2px solid $white;
+                    width: 30px;
+                    height: 30px;
+                }
+                &:before {
+                    top: 0;
+                    right: 0;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+                &:after {
+                    top: 19px;
+                    right: 0;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    #inquiry_form {
+        .control-group {
+            input {
+                width: calc(100% - 15px);
+            }
+            textarea {
+                width: calc(100% - 12px);
+            }
+        }
+    }
+    #inquiry-page {
+        .main_content {
+            padding: 0 15px !important;
+        }
+        .confirm-block {
+            margin: 0;
+            padding: 2rem 1rem 1rem;
+            width: 90%;
+            height: 80%;
+            table {
+                display: block;
+                width: 100%;
+                tbody {
+                    display: block;
+                    width: 100%;
+                    line-height: 1.6;
+                }
+                tr {
+                    display: block;
+                    width: 100%;
+                    line-height: 1.6;
+                    th, td {
+                        display: block;
+                        text-align: left;
+                        line-height: 1.6;
+                        width: calc(100% - 20px);
+                    }
+                    th {
+                        background-color: $gray;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+        .lead {
+            margin: 0 0 2rem;
+            + .alert {
+                margin-bottom: 2rem;
+            }
+            p {
+                font-size: .8rem;
+                line-height: 1.2rem;
+                text-align: left;
+                margin: 0 0 1rem;
+            }
+        }
+    }
+}
+</style>
