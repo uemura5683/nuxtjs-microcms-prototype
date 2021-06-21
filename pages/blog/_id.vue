@@ -1,5 +1,5 @@
 <template>
-  <div id="news-detail-page" class="container">
+  <div id="news-detail-page">
     <main> 
       <div id="main_content">
         <div class="news-detail-inner">
@@ -48,9 +48,8 @@
 <style lang="scss">
   #news-detail-page {
     margin: 0 0 1rem;
+    padding: 0 15px;
     .news-detail-inner {
-      flex: 0 0 83.333333%;
-      max-width: 83.333333%;
       margin: 2rem auto 0;
       border: 1px solid #e5e5e5;
       padding: 2rem;

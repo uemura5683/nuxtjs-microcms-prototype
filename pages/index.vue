@@ -31,13 +31,13 @@
             </ol>
           </section>
         </div>
-        <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
-          <div class="main_content col-md-10 p-0">
+        <div id="main_content">
+          <div class="main_content">
             <div id="news">
               <div class="top_content_inner">
                 <div class="top_content_inner text-center">
-                    <h2 class="card-title">Blog</h2>
-                    <ul>
+                    <h2 class="card-title"><span>Blog</span></h2>
+                    <ul class="c-card-wrap">
                       <li class="c-card-extend" v-for="blog in top.blog" :key="blog.id">
                         <figure>
                           <nuxt-link 
@@ -52,8 +52,8 @@
                         </p>
                       </li>
                     </ul>
-                    <h2 class="card-title">Portfolio</h2>
-                    <ul>
+                    <h2 class="card-title"><span>Portfolio</span></h2>
+                    <ul class="c-card-wrap">
                       <li class="c-card-extend" v-for="portfolio in top.portfolio" :key="portfolio.id">
                         <figure>
                           <a
@@ -103,7 +103,6 @@ export default {
         headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
-    console.log(data);
     return {
       top: data
     }
@@ -258,11 +257,6 @@ $white: #ffffff;
 .top_content_inner {
   margin: 0 0 2rem;
   text-align: center;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
 }
 @media screen and (max-width: 767px) {
   #top-page {

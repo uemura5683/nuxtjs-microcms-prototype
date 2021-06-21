@@ -26,15 +26,6 @@ body {
     }
 }
 
-.container {
-    max-width: 100% !important;
-}
-@media screen and (max-width: 992px) {
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
 .main_content {
     margin: 0 auto;
 }
@@ -80,7 +71,11 @@ body {
     }
 }
 
-/*コンテンツ*/
+/*card-extend*/
+.c-card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
 .c-card-extend {
     padding: 0 15px 15px;
     width: calc(99.9% / 3 - 30px);
@@ -127,16 +122,13 @@ body {
     }
 }
 .card-title {
-    padding: 10px 15px 10px;
     margin: 2rem auto;
-    display: inline-block;
-    border-bottom: 1px solid #333333;
+    text-align: center;
     font-weight: bold;
-    .card-subtitle {
-        display: block;
-        font-size: 1.0rem;
-        margin: .5rem 0 0;
-        font-weight: normal;
+    span {
+        display: inline-block;        
+        padding: 10px 15px 10px;
+        border-bottom: 1px solid #333333;
     }
 }
 @media screen and (max-width: 767px) {

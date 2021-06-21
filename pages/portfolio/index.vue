@@ -1,10 +1,10 @@
 <template>
-  <div id="news-list-page" class="container">
+  <div id="news-list-page">
     <main>
       <div id="main_content">
         <div id="news-content-list" class="text-center">
-            <h2 class="card-title">Portfolio</h2>
-            <ul>
+            <h2 class="card-title"><span>Portfolio</span></h2>
+            <ul class="c-card-wrap">
                 <li class="c-card-extend" v-for="portfolio in portfolios" :key="portfolio.id">
                     <figure>
                       <a
@@ -56,22 +56,3 @@
     }
   }
 </script>
-<style lang="scss">
-#news-list-page {
-  #news-content-list {
-    text-align: center;
-    margin: 0 auto;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  #news-list-page {
-    #news-content-list {
-      width: 100%;
-    }
-  }
-}
-</style>

@@ -10,11 +10,11 @@ $gray: #e5e5e5;
   header {
     width: 100%;
     margin: 0 auto;
-    padding: .5em 0; 
+    padding: 10px 0; 
     background-color: $l_gray;
     border-bottom: 1px solid $gray;
      > * {
-      width: 90%;
+      width: calc( 100% - 30px );
       margin: 0 auto;
       display: table;
       > * {
@@ -57,11 +57,6 @@ $gray: #e5e5e5;
 @media screen and (max-width: 767px) {
   .header {
     header {
-      padding: 10px 0;
-      > * {
-        width: calc( 100% - 30px );
-        margin: 0 auto;
-      }
       .header-left {
         width: 40%;
       }

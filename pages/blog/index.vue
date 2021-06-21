@@ -1,16 +1,16 @@
 <template>
-  <div id="news-list-page" class="container mt-4 p-0">
+  <div id="news-list-page">
     <main>
       <div id="main_content">
         <div id="news-content-list" class="text-center">
-            <h2 class="card-title">Blog</h2>
-            <ul>
+            <h2 class="card-title"><span>Blog</span></h2>
+            <ul class="c-card-wrap">
                 <li class="c-card-extend" v-for="blog in blogs" :key="blog.id">
                     <figure>
                       <nuxt-link
                         :to="`/blog/${blog.id}`"
                         :style="{ 'background-image': 'url(' + blog.image.url + ')' }"
-                        :alt="blog.title">>
+                        :alt="blog.title">
                       </nuxt-link>
                     </figure>
                     <p class="c-post-content">
@@ -55,22 +55,3 @@
     }
   }
 </script>
-<style lang="scss">
-#news-list-page {
-  #news-content-list {
-    text-align: center;
-    margin: 0 auto;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  #news-list-page {
-    #news-content-list {
-      width: 100%;
-    }
-  }
-}
-</style>

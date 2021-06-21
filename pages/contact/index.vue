@@ -1,9 +1,9 @@
 <template>
-  <div id="inquiry-page" class="container mt-4 p-0">
+  <div id="inquiry-page">
     <main> 
-      <div id="main_content" class="container d-block d-md-flex mt-4 p-0">
-          <div class="main_content col-md-6  p-0 text-center">
-            <h2 class="card-title">Contact</h2>
+      <div id="main_content">
+          <div class="main_content">
+            <h2 class="card-title"><span>Contact</span></h2>
             <div class="lead">
               <p>技術・メンターに関するお問い合わせをお受けしておリます。お気軽にお問い合わせください。</p>
               <p>内容によってはご返答できない場合がございます。あらかじめご了承くださいませ。</p>

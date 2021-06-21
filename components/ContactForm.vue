@@ -117,24 +117,24 @@ $gray: #e5e5e5;
 $d_gray: #666666;
 $black: #000000;
 #inquiry_form {
+    padding: 0 15px;
     .control-group {
         .control-label {
             margin: 0 0 5px;
             text-align: left;
         }
         input {
-            width: 100%;
+            width: calc( 100% - 14px );
             height: 40px;
             line-height: 40px;
             margin: 0 0 20px;
         }
         textarea {
-            width: 100%;
+            width: calc(100% - 14px);
         }
     }
 }
 #inquiry-page {
-    width: 75%;
     margin: 0 auto;
     text-align: center;
     .confirm-block {

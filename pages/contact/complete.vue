@@ -1,8 +1,8 @@
 <template>
-  <div id="inquiry-conplete" class="container">
+  <div id="inquiry-conplete">
     <main> 
       <div id="main_content">
-        <h2 class="card-title">Contact</h2>
+        <h2 class="card-title"><span>Contact</span></h2>
         <div class="lead">
           <p>
             この度はお問い合わせメールをお送りいただき<br class="visible-phone">
@@ -33,9 +33,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  #inquiry-conplete {
-    text-align: center;
-  }
-</style>

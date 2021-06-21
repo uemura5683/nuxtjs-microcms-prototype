@@ -1,5 +1,5 @@
 <template>
-    <div id="profile-page" class="container">
+    <div id="profile-page">
         <main> 
             <div id="main_content">
                 <div class="profile-page-inner">
@@ -48,14 +48,7 @@
 </script>
 
 <style lang="scss">
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
-$fs-min: 10;
-$fs-max: 100;
-
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000; $fs-min: 10; $fs-max: 100;
 #profile-page {
     main {
         width: 100%;
@@ -64,14 +57,12 @@ $fs-max: 100;
         background-color: $white;
         #main_content {
             .profile-page-inner {
-                width: 75%;
                 margin: 0 auto;
                 > * {
-                    justify-content: flex-start;
                     -webkit-justify-content: flex-start;
-                    align-items: center;
+                            justify-content: flex-start;
                     -webkit-align-items: center;
-                    width: 100%;
+                            align-items: center;
                     height: auto;
                     background: #fff;
                     position: relative;
@@ -199,14 +190,7 @@ $fs-max: 100;
         main {
             padding: 0.5rem 0;
             #main_content {
-                margin: 0 !important;
                 .profile-page-inner {
-                    width: calc(100% - 30px);
-                    padding: 0 15px !important;
-                    margin: 0 !important;
-                    > * {
-                        width: calc(100% - 48px);
-                    }
                     #name_img {
                         #title {
                             margin: 0;
@@ -219,7 +203,7 @@ $fs-max: 100;
                     #description, #carrer, #programing {
                         h2, h3 {
                             width: 100%;
-                            padding: 0;
+                            padding: 0 0 10px;
                             margin: 0;
                         }
                         .skill_detail, p {
@@ -230,8 +214,6 @@ $fs-max: 100;
                             margin: 0;
                         }
                         li {
-                            font-size: .9rem;
-                            line-height: 1.4;
                             width: 100% !important;
                             margin: 1rem 0 !important;
                         }
