@@ -2,11 +2,14 @@
   <div id="news-detail-page">
     <main> 
       <div id="main_content">
-        <div class="news-detail-inner">
+        <div class="news-detail-inner l-main">
           <figure :style="{ 'background-image': 'url(' + blogs.image.url + ')' }"></figure>
           <h2 class="c-post-info-title">{{ blogs.title }}</h2>
           <p class="c-post-content">{{blogs.date | moment('LTS')}}</p>
           <div class="dom-content" v-html="blogs.body"></div>
+        </div>
+        <div class="l-side">
+          <l-menu />
         </div>
       </div>
     </main>
@@ -15,6 +18,7 @@
 
 <script>
   import axios from 'axios';
+  import LMenu from '~/components/layouts/menu';
   import moment from "moment";
   export default {
     head: {
@@ -22,6 +26,9 @@
       meta: [
         { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのビジネスブログ詳細ページです。' }
       ]
+    },
+    components: {
+      LMenu
     },
     filters: {
         moment: function (date) {

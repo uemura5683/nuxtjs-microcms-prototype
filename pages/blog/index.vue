@@ -2,7 +2,7 @@
   <div id="news-list-page">
     <main>
       <div id="main_content">
-        <div id="news-content-list" class="text-center">
+        <div id="news-content-list" class="l-main">
             <h2 class="card-title"><span>Blog</span></h2>
             <ul class="c-card-wrap">
                 <li class="c-card-extend" v-for="blog in blogs" :key="blog.id">
@@ -20,12 +20,16 @@
                 </li>
             </ul>
         </div>
+        <div class="l-side">
+          <l-menu />
+        </div>
       </div>
     </main>
   </div>
 </template>
 <script>
   import axios from 'axios';
+  import LMenu from '~/components/layouts/menu';
   import moment from "moment";
   export default {
     head: {
@@ -33,6 +37,9 @@
       meta: [
         { hid: 'description', name: 'description', content: 'フロントエンドエンジニアのうえむーのブログサイトのビジネスブログ一覧ページです。' }
       ]
+    },
+    components: {
+      LMenu
     },
     filters: {
         moment: function (date) {

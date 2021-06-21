@@ -32,7 +32,7 @@
           </section>
         </div>
         <div id="main_content">
-          <div class="main_content">
+          <div class="main_content l-main">
             <div id="news">
               <div class="top_content_inner">
                 <div class="top_content_inner text-center">
@@ -73,6 +73,9 @@
               </div>
             </div>
           </div>
+          <div class="l-side">
+            <l-menu />
+          </div>
         </div>
         <div id="animaton_bg">
           <div class="animation__first">
@@ -86,8 +89,12 @@
 
 <script>
 import axios from 'axios';
+import LMenu from '~/components/layouts/menu';
 import moment from "moment";
 export default {
+  components: {
+    LMenu
+  },
   filters: {
       moment: function (date) {
           return moment(date).format('YYYY/MM/DD HH:mm');

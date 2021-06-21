@@ -2,7 +2,7 @@
     <div id="profile-page">
         <main> 
             <div id="main_content">
-                <div class="profile-page-inner">
+                <div class="profile-page-inner l-main">
                     <div id="name_img">
                     <h2 id="title">{{ profile.title }}</h2>
                     <div id="img"><img :src="profile.image.url"></div>
@@ -14,19 +14,26 @@
                         <div class='skill_detail' v-html="profile.skill.skill"></div>
                     </div>
                 </div>
+                <div class="l-side">
+                <l-menu />
+                </div>
             </div>
         </main>
     </div>
 </template>
 
 <script>
-    import axios from 'axios'
+    import axios from 'axios';
+    import LMenu from '~/components/layouts/menu';
     export default {
         head: {
-        title: 'プロフィール | フロントエンド うえむーのプロトタイプサイト | NU-Prototype',
-        meta: [
-            { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのプロフィールページです。' }
-        ]
+            title: 'プロフィール | フロントエンド うえむーのプロトタイプサイト | NU-Prototype',
+             meta: [
+                { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのプロフィールページです。' }
+            ]
+        },
+        components: {
+        LMenu
         },
         data() {
             return {
