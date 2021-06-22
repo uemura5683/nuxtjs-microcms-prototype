@@ -157,7 +157,7 @@ $black: #000000;
             border-right: 1px solid $gray;
             th, td {
                 padding: 10px;
-                font-size: 14px;
+                font-size: 1.4rem;
                 border-left: 1px solid $gray;
                 border-bottom: 1px solid $gray;
             }
@@ -248,12 +248,6 @@ $black: #000000;
             margin: 0 0 2rem;
             + .alert {
                 margin-bottom: 2rem;
-            }
-            p {
-                font-size: .8rem;
-                line-height: 1.2rem;
-                text-align: left;
-                margin: 0 0 1rem;
             }
         }
     }

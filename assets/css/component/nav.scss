@@ -87,7 +87,7 @@ nav {
         a, label {
           display: block;
           text-decoration: none;
-          font-size: 18px;
+          font-size: 1.8rem;
           padding: 15px 10px;
           position: relative;
           &:hover, &:focus {
@@ -112,6 +112,7 @@ nav {
       }
     }
   }
+
   body.active {
     nav {
       margin-right: 0px;
@@ -144,5 +145,29 @@ nav {
     }
     to{
       margin-left:0; opacity:1; left: 0%;
+    }
+  }
+
+  .l-side nav {
+    position: static;
+    background: white;
+    max-width: calc(100% - 15px);
+    > ul {
+      width: 100%;
+      > li {
+        opacity: 1;
+        text-align: left;
+        border-bottom: 1px solid $gray;
+        animation: none !important;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .l-side nav {
+      max-width: 100%;
+      padding-top: 20px;
+      > ul {
+        border-top: 1px solid $gray;
+      }
     }
   }

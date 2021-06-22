@@ -2,6 +2,9 @@
   <div id="news-list-page">
     <main>
       <div id="main_content">
+        <div class="l-side">
+          <l-menu />
+        </div>
         <div id="news-content-list" class="l-main">
             <h2 class="card-title"><span>Portfolio</span></h2>
             <ul class="c-card-wrap">
@@ -20,9 +23,6 @@
                     </p>
                 </li>
             </ul>
-        </div>
-        <div class="l-side">
-          <l-menu />
         </div>
       </div>
     </main>

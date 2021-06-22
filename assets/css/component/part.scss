@@ -26,10 +26,34 @@ body {
     }
 }
 
-.main_content {
-    margin: 0 auto;
+#main_content {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
 }
-
+.l-main {
+  width: 100%;
+}
+.l-side ~ .l-main {
+  width: 72.75%;
+  order: 1;
+}
+.l-side {
+  width: 24.75%;
+  margin: 0 0 0 2.5%;
+  order: 2;
+}
+@media screen and (max-width: 767px) {
+  .l-side ~ .l-main {
+    width: 100%;
+    order: 1;
+  }
+  .l-side {
+    width: 100%;
+    order: 2;
+  }
+}
 /*btn*/
 .btn {
     &.btn-component {
@@ -88,7 +112,7 @@ body {
         }
     }
     figure {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         overflow: hidden;
         border: 1px solid #e5e5e5;
         a, span {
@@ -105,13 +129,12 @@ body {
         text-align: left;
         > * {
             display: block;
-            margin: 0 0 .5rem;
+            margin: 0 0 10px;
             &:last-child {
                 margin: 0;
             }
         }
         .c-post-info-date {
-            font-size: 12px;
             text-transform: uppercase;
             color: $white;
             text-align: left;
@@ -137,7 +160,6 @@ body {
         padding: 0 5px 10px;
     }
     .card-title {
-        font-size: 1.2rem;
         .card-subtitle {
             font-size: 0.8rem;
         }
@@ -211,7 +233,8 @@ button.btn-primary, a.btn-primary, input[type="submit"].btn-primary {
 
 /* lead */
 .lead {
-    margin: 0 0 1rem;
+    margin: 0 15px 2rem;
+    text-align: center;
     > * {
         line-height: 1.6;
     }

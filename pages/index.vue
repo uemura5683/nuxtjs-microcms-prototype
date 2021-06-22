@@ -32,6 +32,9 @@
           </section>
         </div>
         <div id="main_content">
+          <div class="l-side">
+            <l-menu />
+          </div>
           <div class="main_content l-main">
             <div id="news">
               <div class="top_content_inner">
@@ -72,9 +75,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="l-side">
-            <l-menu />
           </div>
         </div>
         <div id="animaton_bg">
@@ -266,9 +266,6 @@ $white: #ffffff;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
-  #top-page {
-    margin-top: calc( 1rem + 1px + 56px ) !important;
-  }
   .top_content_inner {
     margin: 0 0 1rem;
   }

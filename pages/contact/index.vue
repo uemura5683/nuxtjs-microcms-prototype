@@ -2,17 +2,17 @@
   <div id="inquiry-page">
     <main> 
       <div id="main_content">
-          <div class="main_content l-main">
-            <h2 class="card-title"><span>Contact</span></h2>
-            <div class="lead">
-              <p>技術・メンターに関するお問い合わせをお受けしておリます。お気軽にお問い合わせください。</p>
-              <p>内容によってはご返答できない場合がございます。あらかじめご了承くださいませ。</p>
-            </div>
-            <ContactForm />
+        <div class="l-side">
+          <l-menu />
+        </div>
+        <div class="main_content l-main">
+          <h2 class="card-title"><span>Contact</span></h2>
+          <div class="lead">
+            <p>技術・メンターに関するお問い合わせをお受けしておリます。お気軽にお問い合わせください。</p>
+            <p>内容によってはご返答できない場合がございます。あらかじめご了承くださいませ。</p>
           </div>
-          <div class="l-side">
-            <l-menu />
-          </div>
+          <ContactForm />
+        </div>
       </div>
     </main>
     <ContactConfirm />

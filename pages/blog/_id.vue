@@ -2,14 +2,14 @@
   <div id="news-detail-page">
     <main> 
       <div id="main_content">
+        <div class="l-side">
+          <l-menu />
+        </div>
         <div class="news-detail-inner l-main">
           <figure :style="{ 'background-image': 'url(' + blogs.image.url + ')' }"></figure>
           <h2 class="c-post-info-title">{{ blogs.title }}</h2>
           <p class="c-post-content">{{blogs.date | moment('LTS')}}</p>
           <div class="dom-content" v-html="blogs.body"></div>
-        </div>
-        <div class="l-side">
-          <l-menu />
         </div>
       </div>
     </main>
@@ -60,6 +60,7 @@
       margin: 2rem auto 0;
       border: 1px solid #e5e5e5;
       padding: 2rem;
+      box-sizing: border-box;
       .c-post-info-title,
       .c-post-content {
         font-size: 2.4rem;

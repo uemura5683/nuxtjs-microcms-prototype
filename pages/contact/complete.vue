@@ -2,6 +2,9 @@
   <div id="inquiry-conplete">
     <main> 
       <div id="main_content">
+        <div class="l-side">
+          <l-menu />
+        </div>
         <div class="inquiry-conplete-inner l-main">
           <h2 class="card-title"><span>Contact</span></h2>
           <div class="lead">
@@ -19,9 +22,6 @@
           <div class="form-actions">
             <a href="/" class="btn btn-small btn-back">トップへ</a>
           </div>
-        </div>
-        <div class="l-side">
-          <l-menu />
         </div>
       </div>
     </main>

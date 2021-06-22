@@ -1,25 +1,25 @@
 <template>
-    <div id="profile-page">
-        <main> 
-            <div id="main_content">
-                <div class="profile-page-inner l-main">
-                    <div id="name_img">
-                    <h2 id="title">{{ profile.title }}</h2>
-                    <div id="img"><img :src="profile.image.url"></div>
-                    </div>
-                    <div id="description" v-html="profile.description"></div>
-                    <div id="carrer" v-html="profile.carrer"></div>
-                    <div id="programing">
-                        <h3>{{profile.skill.title}}</h3>
-                        <div class='skill_detail' v-html="profile.skill.skill"></div>
-                    </div>
-                </div>
-                <div class="l-side">
-                <l-menu />
-                </div>
-            </div>
-        </main>
-    </div>
+  <div id="profile-page">
+    <main> 
+        <div id="main_content">
+        <div class="l-side">
+        <l-menu />
+        </div>
+        <div class="profile-page-inner l-main">
+        <div id="name_img">
+        <h2 id="title">{{ profile.title }}</h2>
+        <div id="img"><img :src="profile.image.url"></div>
+        </div>
+        <div id="description" v-html="profile.description"></div>
+        <div id="carrer" v-html="profile.carrer"></div>
+        <div id="programing">
+            <h3>{{profile.skill.title}}</h3>
+            <div class='skill_detail' v-html="profile.skill.skill"></div>
+        </div>
+        </div>
+        </div>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -28,7 +28,7 @@
     export default {
         head: {
             title: 'プロフィール | フロントエンド うえむーのプロトタイプサイト | NU-Prototype',
-             meta: [
+            meta: [
                 { hid: 'description', name: 'description', content: 'フロントエンド うえむーのプロトタイプサイトのプロフィールページです。' }
             ]
         },
@@ -110,7 +110,7 @@ $white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #00
                         margin: 0 1rem 0 0;
                         width: calc(50% - 1rem);
                         h2 {
-                            font-size: 18px;  
+                            font-size: 1.8rem;  
                             padding: 10px 0;
                             border-bottom: 1px solid $d_gray;
                             width: 100%;
