@@ -64,6 +64,7 @@
       .c-post-info-title,
       .c-post-content {
         font-size: 2.4rem;
+        line-height: 1.6;
         margin: 0 0 1rem 20px;
         float: left;
         width: calc(50% - 20px);
@@ -112,5 +113,4 @@
       }
     }
   }
-
 </style>

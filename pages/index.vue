@@ -126,6 +126,16 @@ $white: #ffffff;
     position: relative;
     padding-top: 40%;
     perspective: 100px;
+    *::-webkit-scrollbar {
+      width: 0;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: none;
+    }
     .carousel__viewport {
       position: absolute;
       top: 0;

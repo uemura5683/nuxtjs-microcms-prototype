@@ -1,8 +1,4 @@
-$white: #ffffff;
-$l_gray: #fafafa;
-$gray: #e5e5e5;
-$d_gray: #666666;
-$black: #000000;
+$white: #ffffff; $l_gray: #fafafa; $gray: #e5e5e5; $d_gray: #666666; $black: #000000;
 
 #menu {
   -webkit-justify-content: flex-end;
@@ -137,38 +133,38 @@ nav {
   }
 
   @keyframes slideNav{
-    0%{
-      opacity:0; left: 100%;
-    }
-    80%{
-      opacity:1
-    }
-    to{
-      margin-left:0; opacity:1; left: 0%;
-    }
+    0%{ opacity:0; left: 100%; }
+    80%{ opacity:1 }
+    to{ margin-left:0; opacity:1; left: 0%; }
   }
 
-  .l-side nav {
-    position: static;
-    background: white;
-    max-width: calc(100% - 15px);
-    border: none;
-    > ul {
-      width: 100%;
-      > li {
-        opacity: 1;
-        text-align: left;
-        border-bottom: 1px solid $gray;
-        animation: none !important;
+  .l-side {
+    nav {
+      position: static;
+      background: white;
+      max-width: calc(100% - 15px);
+      border: none;
+      padding: 20px 0 0;
+      > ul {
+        width: 100%;
+        border-top: 1px solid $gray;
+        > li {
+          opacity: 1;
+          text-align: left;
+          border-bottom: 1px solid $gray;
+          animation: none !important;
+        }
       }
     }
   }
   @media screen and (max-width: 767px) {
-    .l-side nav {
-      max-width: 100%;
-      padding-top: 20px;
-      > ul {
-        border-top: 1px solid $gray;
+    .l-side {
+      nav {
+        max-width: 100%;
+        padding-top: 20px;
+        > ul {
+          border-top: 1px solid $gray;
+        }
       }
     }
   }
