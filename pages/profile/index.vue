@@ -33,12 +33,12 @@
             ]
         },
         components: {
-        LMenu
+            LMenu
         },
         data() {
             return {
-                data: {}
-            };
+                posts: []
+            }
         },
         async asyncData({ params }) {
         const { data } = await axios.get(
