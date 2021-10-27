@@ -56,7 +56,7 @@
       const { data } = await axios.get(
         `https://nu-base-template.microcms.io/api/v1/portfolio`,
         {
-          headers: { 'X-API-KEY': process.env.API_KEY }
+          headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
         }
       )
       return {

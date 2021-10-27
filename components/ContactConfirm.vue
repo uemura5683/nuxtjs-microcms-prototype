@@ -43,7 +43,7 @@ export default {
           },
           { headers: {
             'Content-Type': 'application/json',
-            'X-WRITE-API-KEY': '37c4dbb7-e67a-489a-906c-17308257a00f'
+            'X-MICROCMS-API-KEY': '37c4dbb7-e67a-489a-906c-17308257a00f'
             }
           }
         )
