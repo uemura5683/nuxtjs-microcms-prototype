@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-innter">
       <div class="footer-left">
-        <p>(c) 2020 NU-Prototype</p>
+        <p>(c) 2021 Nu-Prototype</p>
       </div>
       <div class="footer-right">
         <ul>

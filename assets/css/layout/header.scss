@@ -44,6 +44,9 @@ $gray: #e5e5e5;
 
 #header_icon {
   margin: 0 15px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   a {
     height: 50px;
     display: block;
@@ -52,7 +55,20 @@ $gray: #e5e5e5;
       line-height: 50px;
     }
   }
+  &_nustack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 15px 0 0;
+    a {
+      img {
+        height: 26px;
+        width: auto;
+      }
+    }
+  }
 }
+
 
 @media screen and (max-width: 767px) {
   .header {
@@ -72,6 +88,9 @@ $gray: #e5e5e5;
     width: 100%;
   }
   #header_icon {
-    display: none;;
+    display: none;
+    &_nustack {
+      display: none;
+    }
   }
 }
